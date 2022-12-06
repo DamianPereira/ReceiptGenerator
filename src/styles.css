@@ -1,0 +1,28 @@
+body {
+  font-family: sans-serif;
+}
+
+.product-input {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  height: 5rem;
+  gap: 1rem;
+}
+
+.label-input-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+textarea {
+  width: 300px;
+  height: 300px;
+}
+
+.input-output {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
