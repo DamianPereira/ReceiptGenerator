@@ -21,6 +21,9 @@ export class Item {
     if (isNaN(this.quantity)) {
       throw new Error("Error processing product, quantity is not a number");
     }
+    if (isNaN(this.price)) {
+      throw new Error("Error processing product, price is not a number");
+    }
   }
   isExempt() {
     return exemptProducts.includes(this.productName);

@@ -32,4 +32,17 @@ describe("Item", () => {
     expect(importedNonExempt.isImported()).toEqual(true);
     expect(nonImportedProduct.isImported()).toEqual(false);
   });
+
+  it("raises exception for bad quantity", () => {
+    const createProduct = () => {
+      new Item('a chocolate bar at 10.77');
+    }
+    expect(createProduct).toThrow('Error processing product, quantity is not a number')
+  });
+  it("raises exception for bad price", () => {
+    const createProduct = () => {
+      new Item('1 chocolate bar at a price');
+    }
+    expect(createProduct).toThrow('Error processing product, price is not a number')
+  });
 });
